@@ -11,6 +11,7 @@ function sort(arr) {
         }
     }
 }
+
 sort(arr)
 console.log(arr)
 

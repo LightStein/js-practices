@@ -4,7 +4,6 @@ const arr = [-1,-2,-3];
 
 function some(arr, fun){
     result = false;
-    console.log(typeof(fun))
 
     if (!Array.isArray(arr))
         throw new TypeError("provided argument isn't an array");
