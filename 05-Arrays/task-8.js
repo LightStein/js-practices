@@ -7,6 +7,9 @@ function recursive_filter(original_list){
 	} else{
 
 		function loop (x=0){
+			if (typeof(original_list[x]) != 'number' && !Array.isArray(original_list[x])){
+				throw Error ("invalid array member");
+			}
 
 			if (Array.isArray(original_list[x]))
 				recursive_filter(original_list[x])
@@ -19,13 +22,13 @@ function recursive_filter(original_list){
 		}
 		loop()
 	}
-	return result_list
+	return result_list;
 }
 
 
 const arr = [[[1, 2], [1, 2]], [[2, 1], [1, 2]]];
 // const arr = []
-console.log(recursive_filter(arr))
+console.log(recursive_filter(arr));
 
 
 
