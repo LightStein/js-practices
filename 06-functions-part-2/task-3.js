@@ -23,9 +23,9 @@ function mix(...parameters){
                 })
             } if(success){
                 res = parameters[i](prev)
-                return loop(res,i+1)
+                return loop(res,i+1);
             }else{
-                return loop(prev,i+1)
+                return loop(prev,i+1);
             }
             
             
